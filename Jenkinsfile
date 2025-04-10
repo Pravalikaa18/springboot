@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'rohith1305/java-application:${BUILD_NUMBER}' // Unique versioned image
-        DOCKER_CREDENTIALS = '7c910bc4-e2e4-48a4-857c-51be93277e96' // Jenkins Docker Hub Credentials I
+        DOCKER_IMAGE = 'pravalikaa18/java-application:${BUILD_NUMBER}' // Unique versioned image
+        DOCKER_CREDENTIALS = '98897e03-c137-4438-8da4-dd1f33b63fba' // Jenkins Docker Hub Credentials I
     }
 
     stages {
         stage('Checkout Code') {
             steps {
                 script {
-                    git branch: 'main', url: 'https://github.com/KyathamRohith/springboot.git'
+                    git branch: 'main', url: 'https://github.com/pravalikaa18/springboot.git'
                 }
             }
         }
